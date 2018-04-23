@@ -1,0 +1,126 @@
+/**
+ * Created by dingyiming on 2017/6/2.
+ * <p>
+ * 江苏摇铃网络科技有限公司，版权所有。
+ * Copyright (C) 2015-2017 All Rights Reserved.
+ */
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: 16px;
+  color: #666666;
+  font-family: "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+html, body {
+  margin: 0;
+}
+
+input,select,textarea,label {
+  font-family: "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+html, body, div, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, ul, li, fieldset, form, label, input, legend, table, caption, tbody, tfoot, thead, tr, th, td, textarea, article, aside, audio, canvas, figure, footer, header, mark, menu, nav, section, time, video {
+  margin: 0;
+  padding: 0;
+}
+
+.app { min-width: 1024px; }
+
+/* 查看或编辑，上方标题样式 */
+.cardList_title {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: .2rem;
+  padding-left: .2rem;
+  border-left: .05rem solid #0868cf;
+  border-bottom: .01rem solid #eee;
+  padding-bottom: .1rem;
+  padding-top: .1rem;
+}
+
+.cardList_title--sub {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: .2rem;
+  padding-left: .2rem;
+  border-left: .05rem solid #0868cf;
+  border-bottom: .01rem solid #eee;
+}
+
+.el-message-box__headerbtn {
+  border: 0;
+  background-color: white;
+}
+
+.el-dialog__body {
+  padding-bottom: 0;
+}
+
+.el-table .cell {
+  padding-left: .05rem;
+  padding-right: .05rem;
+}
+
+.el-menu-item-group__title {
+  padding-top: 0;
+}
+
+.el-table__row .gutter {
+  display: none;
+}
+
+.el-table__header{
+  background-color: #f0f5f8;
+}
+
+.el-table th {
+  background-color: #f0f5f8;
+ }
+
+.el-table__fixed-header-wrapper thead div{
+  background-color: #f0f5f8;
+}
+
+.el-table__header-wrapper thead div, .el-table__footer-wrapper thead div{
+  background-color: #f0f5f8;
+}
+
+.el-table .info-row {
+  background-color: #f9f9f9;
+}
+
+.el-table__fixed {
+  box-shadow: none !important;
+}
+
+.el-table__fixed-right {
+  box-shadow: none !important;
+}
+
+.el-table__fixed-right  td {
+  border-left: 1px solid rgb(223, 228, 236);
+}
+
+.el-table__fixed-right  th {
+  border-left: 1px solid rgb(223, 228, 236);
+}
+
+.el-upload-list__item {
+  display: inline-block;
+  width: 3rem;
+}

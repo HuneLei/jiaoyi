@@ -1,0 +1,53 @@
+stages:
+  - develop
+  - test
+  - master
+
+prd_develop:
+  stage: develop
+  tags:
+    - frontdevelop
+  only:
+    - develop
+  script:
+    - rm -rf /data/build/$CI_COMMIT_REF_NAME/$CI_PROJECT_NAME/src
+    - cp -rf ./. /data/build/$CI_COMMIT_REF_NAME/$CI_PROJECT_NAME/
+    - cd /data/build/$CI_COMMIT_REF_NAME/$CI_PROJECT_NAME
+    - npm i gpo-public@latest -S
+    - npm install
+    - npm run develop
+    - ls -a
+
+prd_test:
+  stage: test
+  tags:
+    - test
+  only:
+    - test
+  script:
+    - rm -rf /data/build/$CI_COMMIT_REF_NAME/$CI_PROJECT_NAME/src
+    - cp -rf ./. /data/build/$CI_COMMIT_REF_NAME/$CI_PROJECT_NAME/
+    - cd /data/build/$CI_COMMIT_REF_NAME/$CI_PROJECT_NAME
+    - npm i gpo-public@latest -S
+    - npm install
+    - npm run preview
+    - ls -a
+
+prd_master:
+  stage: master
+  tags:
+    - master
+  only:
+    - master
+  script:
+    - rm -rf /data/build/$CI_COMMIT_REF_NAME/$CI_PROJECT_NAME/src
+    - cp -rf ./. /data/build/$CI_COMMIT_REF_NAME/$CI_PROJECT_NAME/
+    - cd /data/build/$CI_COMMIT_REF_NAME/$CI_PROJECT_NAME
+    - npm i gpo-public@latest -S
+    - npm install
+    - npm run master
+    - ls -a
+    - docker login -u gpo -p 3b91abbc3e33d909 docker.yaoling.io
+    - docker build -t docker.yaoling.io/$CI_PROJECT_NAME:$CI_PIPELINE_ID -t docker.yaoling.io/$CI_PROJECT_NAME:latest .
+    - docker push docker.yaoling.io/$CI_PROJECT_NAME:$CI_PIPELINE_ID
+    - docker push docker.yaoling.io/$CI_PROJECT_NAME:latest

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>交易平台</title>
+  <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+  <link rel="shortcut icon" href="./qywico.png" type="image/x-icon">
+  <meta content=always name=referrer>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-page-mode" content="app">
+  <meta content="yes">
+  <meta content="black">
+  <meta content="telephone=no,email=no">
+  <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+  <style>
+    #spinner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -30px;
+      margin-left: -30px;
+      z-index: 99999;
+      width: 66px;
+      height: 60px;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    #spinner>div {
+      background-color: #0868cf;
+      height: 100%;
+      width: 6px;
+      display: inline-block;
+      margin: 0 2px;
+
+      -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+      animation: stretchdelay 1.2s infinite ease-in-out;
+    }
+
+    #spinner .rect2 {
+      -webkit-animation-delay: -1.1s;
+      animation-delay: -1.1s;
+    }
+
+    #spinner .rect3 {
+      -webkit-animation-delay: -1.0s;
+      animation-delay: -1.0s;
+    }
+
+    #spinner .rect4 {
+      -webkit-animation-delay: -0.9s;
+      animation-delay: -0.9s;
+    }
+
+    #spinner .rect5 {
+      -webkit-animation-delay: -0.8s;
+      animation-delay: -0.8s;
+    }
+
+    @-webkit-keyframes stretchdelay {
+      0%,
+      40%,
+      100% {
+        -webkit-transform: scaleY(0.4)
+      }
+      20% {
+        -webkit-transform: scaleY(1.0)
+      }
+    }
+
+    @keyframes stretchdelay {
+      0%,
+      40%,
+      100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+      }
+      20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #app-header {
+      background-color: #0868cf;
+      height: 50px;
+      width: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    .app-header-left {
+      float: left;
+      background-color: #0151a6;
+      height: 50px;
+      width: 220px;
+      text-align: center;
+    }
+
+    .app-header-left-logo {
+      width: 70px;
+      height: 38px;
+      margin-top: 6px;
+      margin-left: 14px;
+      float: left;
+    }
+
+    .app-header-left-span {
+      line-height: 50px;
+      margin-right: 20px;
+      color: #fff;
+    }
+
+    #app-body {
+      background-color: #f0f5f8;
+      width: 213.5px;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: -2;
+    }
+
+    #app-body-line {
+      background-color: #f9f9f9;
+      width: 220px;
+      height: 100%;
+      position: fixed;
+      border-right: 1px solid #eee;
+      left: 0;
+      top: 0;
+      z-index: -3;
+    }
+
+  </style>
+  <!-- <script src="https://api.map.baidu.com/api?v=2.0&ak=kz56tf3jM4fNZPnVA5S42n9GVUimEt9S" type="text/javascript"></script> -->
+</head>
+
+<body>
+  <div id="app-gpo-index-hide">
+    <div id="app-header">
+      <div class="app-header-left">
+        <img class="app-header-left-logo" src="https://gpo.oss-cn-shenzhen.aliyuncs.com/gpo/sys/qywlogo.png" alt="交易平台" />
+        <span class="app-header-left-span">交易平台</span>
+      </div>
+    </div>
+
+    <div id="app-body">
+    </div>
+    <div id="app-body-line">
+    </div>
+    <div id="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+  </div>
+  <!-- <div class="fa fa-search"></div> -->
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+
+  <script>
+    //  不让开右键
+    // document.oncontextmenu = function (evt) {
+    //   evt.preventDefault();
+    // }
+
+    //  不让选择
+    // document.onselectstart = function (evt) {
+    //   evt.preventDefault();
+    // };
+
+  </script>
+
+</body>
+
+</html>
